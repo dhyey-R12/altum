@@ -131,6 +131,21 @@ img{
     color: #fff;
     position: relative;
 }
+.site_header ul:last-child a:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -11px;
+    width: 0%;
+    height: 2px;
+    background-color: #fff;
+    transition: all 0.3s;
+}
+.site_header ul a.active:before,
+.site_header ul:last-child a:hover:before {
+    width: 100%;
+}
 .site_header .custom_navbar ul:first-child a {
     font-size: 12px;
     padding-bottom: 20px;
@@ -677,7 +692,10 @@ img{
 }
 @media (max-width: 991px){
     .site_header {
-        padding: 15px 0;
+        padding: 25px 0;
+    }
+    .site_header .nav_logo img {
+        padding: 0;
     }
     .navbar_toggler {
         display: block;
@@ -706,6 +724,9 @@ img{
     }
     nav.custom_navbar ul li {
         padding: 10px 0;
+    }
+    .site_header ul:last-child a:before {
+        display: none;
     }
     .site_header .custom_navbar ul:first-child {
         display: none;
