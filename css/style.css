@@ -1,5 +1,55 @@
 /*fonts css start*/
+@font-face {
+    font-family: 'Avenir';
+    src: url('../fonts/AvenirLTStd-Book.eot');
+    src: url('../fonts/AvenirLTStd-Book.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/AvenirLTStd-Book.woff2') format('woff2'),
+    url('../fonts/AvenirLTStd-Book.woff') format('woff'),
+    url('../fonts/AvenirLTStd-Book.ttf') format('truetype'),
+    url('../fonts/AvenirLTStd-Book.svg#AvenirLTStd-Book') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 
+@font-face {
+    font-family: 'Avenir';
+    src: url('../fonts/AvenirLTStd-Roman.eot');
+    src: url('../fonts/AvenirLTStd-Roman.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/AvenirLTStd-Roman.woff2') format('woff2'),
+    url('../fonts/AvenirLTStd-Roman.woff') format('woff'),
+    url('../fonts/AvenirLTStd-Roman.ttf') format('truetype'),
+    url('../fonts/AvenirLTStd-Roman.svg#AvenirLTStd-Roman') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Avenir';
+    src: url('../fonts/AvenirLTStd-Black.eot');
+    src: url('../fonts/AvenirLTStd-Black.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/AvenirLTStd-Black.woff2') format('woff2'),
+    url('../fonts/AvenirLTStd-Black.woff') format('woff'),
+    url('../fonts/AvenirLTStd-Black.ttf') format('truetype'),
+    url('../fonts/AvenirLTStd-Black.svg#AvenirLTStd-Black') format('svg');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Avenir';
+    src: url('../fonts/Avenir-Light.eot');
+    src: url('../fonts/Avenir-Light.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Avenir-Light.woff2') format('woff2'),
+    url('../fonts/Avenir-Light.woff') format('woff'),
+    url('../fonts/Avenir-Light.ttf') format('truetype'),
+    url('../fonts/Avenir-Light.svg#Avenir-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
 /*fonts css end*/
 
 /*common css start*/
@@ -625,6 +675,96 @@ img{
     font-weight: 900;
     margin-bottom: 30px;
 }
+.management_content {
+    padding-top: 70px;
+}
+.management_section .custom_row {
+    margin: 0;
+}
+.management_section .custom_row > div {
+    padding: 0;
+}
+.management_image_box {
+    position: relative;
+}
+.management_image {
+    position: relative;
+    overflow: hidden;
+    padding-top: 125%;
+}
+.management_image:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1;
+}
+.management_image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-width: 100%;
+    max-height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+}
+.management_image_text {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    z-index: 1;
+}
+.management_text_name h4,
+.management_image_text h4 {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+.management_text_name p,
+.management_image_text p {
+    color: #fff;
+    font-size: 24px;
+}
+.management_text_box {
+    padding: 40px;
+    background-color: #23234c;
+}
+.management_text_box p {
+    color: #fff;
+    font-size: 18px;
+}
+.management_text_name {
+    padding-top: 125%;
+    background-color: #23234c;
+    position: relative;
+}
+.management_text_name_inner {
+    position: absolute;
+    top: 0;
+    left: 40px;
+    right: 40px;
+    bottom: 0;
+    margin: auto 0;
+    display: table;
+}
+.management_text_box h6 {
+    font-size: 20px;
+    color: #fff;
+    margin-top: 15px;
+}
+.custom_col_3.image_col,
+.custom_col_3.image_text_col {
+    margin-top: -70px;
+}
+.custom_col_3.image_col .management_image:before {
+    display: none;
+}
 /* Management css end */
 
 /* Media css start */
@@ -688,6 +828,19 @@ img{
 @media (max-width: 1199px){
     .site_footer .bottom_footer .custom_container ul li:not(:first-child) {
         margin-left: 20px;
+    }
+    .management_section .custom_col_3 {
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+        margin: 0;
+        display: flex;
+    }
+    .management_section .custom_col_3 > div {
+        width: 100%;
+    }
+    .custom_col_3.order_1 {
+        order: 3;
     }
 }
 @media (max-width: 991px){
@@ -773,6 +926,9 @@ img{
     .site_footer .bottom_footer .custom_container {
         justify-content: center;
         flex-direction: column;
+    }
+    .management_text_box {
+        padding: 25px;
     }
 }
 @media (max-width: 767px){
