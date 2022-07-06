@@ -75,9 +75,9 @@ body.no_scroll {
 a, button, input[type=submit], select{
     cursor: pointer;
 }
-a, a:hover, a:focus, 
+a, a:hover, a:focus,
 button, button:hover, button:focus,
-input, input:hover, input:focus, 
+input, input:hover, input:focus,
 textarea, textarea:hover, textarea:focus,
 select, select:hover, select:focus{
     outline: 0;
@@ -678,11 +678,44 @@ img{
 .management_content {
     padding-top: 70px;
 }
-.management_section .custom_row {
-    margin: 0;
+.management_slider{
+    position: relative;
 }
-.management_section .custom_row > div {
+.management_slider .slick-list {
+    padding: 0 25% !important;
+    overflow: visible !important;
+}
+.management_slider .slick-arrow{
+    position: absolute;
+    z-index: 2;
+    bottom: 20%;
+    background-color: transparent;
+    border: none;
+}
+.management_slider .slick-arrow.slick-prev{
+    right: 6%;
+}
+.management_slider .slick-arrow.slick-next{
+    left: 6%;
+}
+.management_slider_item .custom_row {
+    margin: 0;
+    justify-content: flex-end;
+}
+.management_slider_item.slick-current{
+    transform: translate(0, -50px);
+}
+.management_slider_item.slick-current ~ .management_slider_item  .custom_row{
+    justify-content: flex-start;
+}
+.management_slider_item .custom_row > div {
     padding: 0;
+}
+.management_slider_item .custom_col_6.txt_col{
+    display: none;
+}
+.management_slider_item.slick-current .custom_col_6.txt_col{
+    display: block;
 }
 .management_image_box {
     position: relative;
@@ -828,19 +861,6 @@ img{
 @media (max-width: 1199px){
     .site_footer .bottom_footer .custom_container ul li:not(:first-child) {
         margin-left: 20px;
-    }
-    .management_section .custom_col_3 {
-        -ms-flex: 0 0 50%;
-        flex: 0 0 50%;
-        max-width: 50%;
-        margin: 0;
-        display: flex;
-    }
-    .management_section .custom_col_3 > div {
-        width: 100%;
-    }
-    .custom_col_3.order_1 {
-        order: 3;
     }
 }
 @media (max-width: 991px){
