@@ -32,4 +32,24 @@ $('.management_slider').slick({
 	centerPadding: '0',
 	prevArrow: '<button class="slick-next slick-arrow" type="button"><img src="images/prev-icon.png" /></button>',
 	nextArrow: '<button class="slick-prev slick-arrow" type="button"><img src="images/next-icon.png" /></button>',
+	// responsive: [
+ //    {
+ //      breakpoint: 768,
+ //      settings: {
+ //        arrows: false,
+ //        centerMode: true,
+ //        centerPadding: '40px',
+ //        slidesToShow: 3
+ //      }
+ //    },
+ //    {
+ //      breakpoint: 480,
+ //      settings: {
+ //        arrows: false,
+ //        centerMode: true,
+ //        centerPadding: '40px',
+ //        slidesToShow: 1
+ //      }
+ //    }
+ //  ]
 });
